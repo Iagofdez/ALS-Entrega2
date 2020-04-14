@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrega 2</title>
+
+    <script>
+        function check() {
+            const edCIF = document.getElementById("edCIF").value;
+            const edNombre = document.getElementById("edNombre").value;
+            const edDireccion = document.getElementById("edDireccion").value;
+            const edPoblacion = document.getElementById("edPoblacion").value;
+            const edProvincia = document.getElementById("edProvincia").value;
+            const edCP = document.getElementById("edCP").value;
+            const edPais = document.getElementById("edPais").value;
+            const edContacto= document.getElementById("edContacto").value;
+            const edEmail = document.getElementById("edEmail").value;
+            const edTelefono = document.getElementById("edTelefono").value;
+            const edCIFCliente = document.getElementById("edCIFCliente").value;
+            const edNombreCliente = document.getElementById("edNombreCliente").value;
+            const edDireccionCliente = document.getElementById("edDireccionCliente").value;
+            const edPoblacionCliente = document.getElementById("edPoblacionCliente").value;
+            const edProvinciaCliente = document.getElementById("edProvinciaCliente").value;
+            const edCPCliente = document.getElementById("edCPCliente").value;
+            const edPaisCliente = document.getElementById("edPaisCliente").value;
+            const edContactoCliente = document.getElementById("edContactoCliente").value;
+            const edEmailCliente = document.getElementById("edEmailCliente").value;
+            const edTelefonoCliente = document.getElementById("edTelefonoCliente").value;
+            const edConcepto = document.getElementById("edConcepto").value;
+            const edPrecio = document.getElementById("edPrecio").value;
+            const edUnidades = document.getElementById("edUnidades").value;
+            const edImporteBruto = document.getElementById("edImporteBruto").value;
+            const edIVA = document.getElementById("edIVA").value;
+            const edImporteTotal = document.getElementById("edImporteTotal").value;
+
+
+            var toret = false;
+
+            if (edCIF.trim().length > 0 && edNombre.trim().length > 0 && edDireccion.trim().length > 0 && edPoblacion.trim().length > 0
+                && edProvincia.trim().length > 0 && edCP.trim().length > 0 && edPais.trim().length > 0 && edContacto.trim().length > 0 && edEmail.trim().length > 0
+                && edTelefono.trim().length > 0 && edCIFCliente.trim().length > 0 && edNombreCliente.trim().length > 0 && edDireccionCliente.trim().length > 0
+                && edPoblacionCliente.trim().length > 0 && edProvinciaCliente.trim().length > 0 && edCPCliente.trim().length > 0 && edPaisCliente.trim().length > 0
+                && edContactoCliente.trim().length > 0 && edEmailCliente.trim().length > 0 && edTelefonoCliente.trim().length > 0 && edConcepto.trim().length > 0 &&
+                edPrecio.trim().length > 0 && edUnidades.trim().length > 0 && edImporteBruto.trim().length > 0 && edIVA.trim().length > 0 && edImporteTotal.trim().length > 0
+                && !isNaN(edPrecio) && !isNaN(edUnidades) && !isNaN(edImporteBruto) && !isNaN(edIVA) && !isNaN(edImporteTotal)){
+                toret = true;
+            }
+            return toret;
+        }
+    </script>
+</head>
+<body>
+    <h1>Introduce datos emisor:</h1>
+
+        <form id="frmEntrega" action="/entrega2" method="post" onsubmit="return check()">
+            <label for="edCIF" >CIF: </label>
+            <input type="text" id="edCIF" name="edCIF" />
+            <br>
+            <label for="edNombre" >Nombre: </label>
+            <input type="text" id="edNombre" name="edNombre" />
+            <br>
+            <label for="edDireccion" >Direccion: </label>
+            <input type="text" id="edDireccion" name="edDireccion" />
+            <br>
+            <label for="edPoblacion" >Poblacion: </label>
+            <input type="text" id="edPoblacion" name="edPoblacion" />
+            <br>
+            <label for="edProvincia" >Provincia: </label>
+            <input type="text" id="edProvincia" name="edProvincia" />
+            <br>
+            <label for="edCP" >CP: </label>
+            <input type="text" id="edCP" name="edCP" />
+            <br>
+            <label for="edPais" >Pais: </label>
+            <input type="text" id="edPais" name="edPais" />
+            <br>
+            <label for="edContacto" >Contacto: </label>
+            <input type="text" id="edContacto" name="edContacto" />
+            <br>
+            <label for="edEmail" >Email: </label>
+            <input type="text" id="edEmail" name="edEmail" />
+            <br>
+            <label for="edTelefono" >Telefono: </label>
+            <input type="text" id="edTelefono" name="edTelefono" />
+            <br>
+            <h1>Introduce datos cliente:</h1>
+            <br>
+            <label for="edCIFCliente" >CIF Cliente: </label>
+            <input type="text" id="edCIFCliente" name="edCIFCliente" />
+            <br>
+            <label for="edNombreCliente" >Nombre Cliente: </label>
+            <input type="text" id="edNombreCliente" name="edNombreCliente" />
+            <br>
+            <label for="edDireccionCliente" >Direccion Cliente: </label>
+            <input type="text" id="edDireccionCliente" name="edDireccionCliente" />
+            <br>
+            <label for="edPoblacionCliente" >Poblacion Cliente: </label>
+            <input type="text" id="edPoblacionCliente" name="edPoblacionCliente" />
+            <br>
+            <label for="edProvinciaCliente" >Provincia Cliente: </label>
+            <input type="text" id="edProvinciaCliente" name="edProvinciaCliente" />
+            <br>
+            <label for="edCPCliente" >CP Cliente: </label>
+            <input type="text" id="edCPCliente" name="edCPCliente" />
+            <br>
+            <label for="edPaisCliente" >Pais Cliente: </label>
+            <input type="text" id="edPaisCliente" name="edPaisCliente" />
+            <br>
+            <label for="edContactoCliente" >Contacto Cliente: </label>
+            <input type="text" id="edContactoCliente" name="edContactoCliente" />
+            <br>
+            <label for="edEmailCliente" >Email Cliente: </label>
+            <input type="text" id="edEmailCliente" name="edEmailCliente" />
+            <br>
+            <label for="edTelefonoCliente" >Telefono Cliente: </label>
+            <input type="text" id="edTelefonoCliente" name="edTelefonoCliente" />
+            <br>
+            <h1>Introduce datos factura:</h1>
+            <br>
+            <label for="edConcepto" >Concepto: </label>
+            <input type="text" id="edConcepto" name="edConcepto" />
+            <br>
+            <label for="edPrecio" >Precio por unidad: </label>
+            <input type="text" id="edPrecio" name="edPrecio" />
+            <br>
+            <label for="edUnidades" >Unidades: </label>
+            <input type="text" id="edUnidades" name="edUnidades" />
+            <br>
+            <label for="edIVA" >IVA: </label>
+            <input type="text" id="edIVA" name="edIVA" />
+            <br>
+
+            <input type="submit" value="Submit" />
+        </form>
+</body>
+</html>
